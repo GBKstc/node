@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="bmob-min.js"></script>
+<script>
+	Bmob.initialize("d52387d921ec1cc1901aaf53cc5e0f9b", "59776d19bbca4acab5ce5bdb100033ef");
+	var GameScore = Bmob.Object.extend("GameScore");
+//	var gameScore = new GameScore();
+//	gameScore.set("name", "GBK");
+//	gameScore.save(null, {
+//		success: function(object) {
+//			alert("create object success, object id:"+object.id);
+//		},
+//		error: function(model, error) {
+//			alert("create object fail");
+//		}
+//	});
+	var query = new Bmob.Query(GameScore);
+	query.get("ef7108d51f", {
+		success: function(object) {
+			// The object was retrieved successfully.
+			alert(object.get("score"));
+		},
+		error: function(object, error) {
+			alert("query object fail");
+		}
+	});
+</script>
+</html>

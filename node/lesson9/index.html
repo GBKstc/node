@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var i1 = /a/.test('A');
+    var i2 = /a/i.test('A');
+    var i3 = "hellow hell hoo".match(/h.*?\b/);
+    var i4 = "hellow hell hoo".match(/h.*?\b/g);
+    var i5 = "aaa\nbbb\nccc".match(/^[\s\S]*?$/g);
+    var i6 = "aaa\nbbb\nccc".match(/^[\s\S]*?$/gm);
+    console.log(i1,i2,i3,i4, i5, i6);
+</script>
+</html>
